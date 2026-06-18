@@ -9,111 +9,376 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SectorsRouteImport } from './routes/sectors'
-import { Route as NewsRouteImport } from './routes/news'
-import { Route as MembersRouteImport } from './routes/members'
-import { Route as EsgRouteImport } from './routes/esg'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CareersRouteImport } from './routes/careers'
-import { Route as CapabilityRouteImport } from './routes/capability'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SectorsIndexRouteImport } from './routes/sectors/index'
+import { Route as NewsIndexRouteImport } from './routes/news/index'
+import { Route as MembersIndexRouteImport } from './routes/members/index'
+import { Route as EsgIndexRouteImport } from './routes/esg/index'
+import { Route as ContactIndexRouteImport } from './routes/contact/index'
+import { Route as CareersIndexRouteImport } from './routes/careers/index'
+import { Route as CapabilityIndexRouteImport } from './routes/capability/index'
+import { Route as AboutIndexRouteImport } from './routes/about/index'
+import { Route as SectorsXayDungThiCongRouteImport } from './routes/sectors/xay-dung-thi-cong'
+import { Route as SectorsVatLieuHoanThienRouteImport } from './routes/sectors/vat-lieu-hoan-thien'
+import { Route as SectorsPhuKienCuaKinhRouteImport } from './routes/sectors/phu-kien-cua-kinh'
+import { Route as SectorsNuocSachNuocNongRouteImport } from './routes/sectors/nuoc-sach-nuoc-nong'
+import { Route as SectorsCongNgheAiRouteImport } from './routes/sectors/cong-nghe-ai'
+import { Route as SectorsAmThanhTrinhChieuRouteImport } from './routes/sectors/am-thanh-trinh-chieu'
+import { Route as NewsSlugRouteImport } from './routes/news/$slug'
+import { Route as MembersSoDoHeSinhThaiRouteImport } from './routes/members/so-do-he-sinh-thai'
+import { Route as MembersSlugRouteImport } from './routes/members/$slug'
+import { Route as EsgVanHoaDoanhNghiepRouteImport } from './routes/esg/van-hoa-doanh-nghiep'
+import { Route as EsgHoatDongCongDongRouteImport } from './routes/esg/hoat-dong-cong-dong'
+import { Route as EsgChienLuocRouteImport } from './routes/esg/chien-luoc'
+import { Route as EsgBaoCaoBenVungRouteImport } from './routes/esg/bao-cao-ben-vung'
+import { Route as ContactVanPhongRouteImport } from './routes/contact/van-phong'
+import { Route as CareersViTriDangTuyenRouteImport } from './routes/careers/vi-tri-dang-tuyen'
+import { Route as CareersUngTuyenRouteImport } from './routes/careers/ung-tuyen'
+import { Route as CapabilityHoSoNangLucRouteImport } from './routes/capability/ho-so-nang-luc'
+import { Route as CapabilityDuAnRouteImport } from './routes/capability/du-an'
+import { Route as CapabilityDoiTacRouteImport } from './routes/capability/doi-tac'
+import { Route as CapabilityChungChiRouteImport } from './routes/capability/chung-chi'
+import { Route as AboutTrachNhiemXaHoiRouteImport } from './routes/about/trach-nhiem-xa-hoi'
+import { Route as AboutTamNhinSuMenhRouteImport } from './routes/about/tam-nhin-su-menh'
+import { Route as AboutLichSuRouteImport } from './routes/about/lich-su'
+import { Route as AboutBanDieuHanhRouteImport } from './routes/about/ban-dieu-hanh'
 
-const SectorsRoute = SectorsRouteImport.update({
-  id: '/sectors',
-  path: '/sectors',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewsRoute = NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MembersRoute = MembersRouteImport.update({
-  id: '/members',
-  path: '/members',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsgRoute = EsgRouteImport.update({
-  id: '/esg',
-  path: '/esg',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CareersRoute = CareersRouteImport.update({
-  id: '/careers',
-  path: '/careers',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CapabilityRoute = CapabilityRouteImport.update({
-  id: '/capability',
-  path: '/capability',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SectorsIndexRoute = SectorsIndexRouteImport.update({
+  id: '/sectors/',
+  path: '/sectors/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsIndexRoute = NewsIndexRouteImport.update({
+  id: '/news/',
+  path: '/news/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersIndexRoute = MembersIndexRouteImport.update({
+  id: '/members/',
+  path: '/members/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgIndexRoute = EsgIndexRouteImport.update({
+  id: '/esg/',
+  path: '/esg/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactIndexRoute = ContactIndexRouteImport.update({
+  id: '/contact/',
+  path: '/contact/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersIndexRoute = CareersIndexRouteImport.update({
+  id: '/careers/',
+  path: '/careers/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilityIndexRoute = CapabilityIndexRouteImport.update({
+  id: '/capability/',
+  path: '/capability/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutIndexRoute = AboutIndexRouteImport.update({
+  id: '/about/',
+  path: '/about/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsXayDungThiCongRoute = SectorsXayDungThiCongRouteImport.update({
+  id: '/sectors/xay-dung-thi-cong',
+  path: '/sectors/xay-dung-thi-cong',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsVatLieuHoanThienRoute = SectorsVatLieuHoanThienRouteImport.update({
+  id: '/sectors/vat-lieu-hoan-thien',
+  path: '/sectors/vat-lieu-hoan-thien',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsPhuKienCuaKinhRoute = SectorsPhuKienCuaKinhRouteImport.update({
+  id: '/sectors/phu-kien-cua-kinh',
+  path: '/sectors/phu-kien-cua-kinh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsNuocSachNuocNongRoute = SectorsNuocSachNuocNongRouteImport.update({
+  id: '/sectors/nuoc-sach-nuoc-nong',
+  path: '/sectors/nuoc-sach-nuoc-nong',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsCongNgheAiRoute = SectorsCongNgheAiRouteImport.update({
+  id: '/sectors/cong-nghe-ai',
+  path: '/sectors/cong-nghe-ai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SectorsAmThanhTrinhChieuRoute =
+  SectorsAmThanhTrinhChieuRouteImport.update({
+    id: '/sectors/am-thanh-trinh-chieu',
+    path: '/sectors/am-thanh-trinh-chieu',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const NewsSlugRoute = NewsSlugRouteImport.update({
+  id: '/news/$slug',
+  path: '/news/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersSoDoHeSinhThaiRoute = MembersSoDoHeSinhThaiRouteImport.update({
+  id: '/members/so-do-he-sinh-thai',
+  path: '/members/so-do-he-sinh-thai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MembersSlugRoute = MembersSlugRouteImport.update({
+  id: '/members/$slug',
+  path: '/members/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgVanHoaDoanhNghiepRoute = EsgVanHoaDoanhNghiepRouteImport.update({
+  id: '/esg/van-hoa-doanh-nghiep',
+  path: '/esg/van-hoa-doanh-nghiep',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgHoatDongCongDongRoute = EsgHoatDongCongDongRouteImport.update({
+  id: '/esg/hoat-dong-cong-dong',
+  path: '/esg/hoat-dong-cong-dong',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgChienLuocRoute = EsgChienLuocRouteImport.update({
+  id: '/esg/chien-luoc',
+  path: '/esg/chien-luoc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgBaoCaoBenVungRoute = EsgBaoCaoBenVungRouteImport.update({
+  id: '/esg/bao-cao-ben-vung',
+  path: '/esg/bao-cao-ben-vung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactVanPhongRoute = ContactVanPhongRouteImport.update({
+  id: '/contact/van-phong',
+  path: '/contact/van-phong',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersViTriDangTuyenRoute = CareersViTriDangTuyenRouteImport.update({
+  id: '/careers/vi-tri-dang-tuyen',
+  path: '/careers/vi-tri-dang-tuyen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersUngTuyenRoute = CareersUngTuyenRouteImport.update({
+  id: '/careers/ung-tuyen',
+  path: '/careers/ung-tuyen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilityHoSoNangLucRoute = CapabilityHoSoNangLucRouteImport.update({
+  id: '/capability/ho-so-nang-luc',
+  path: '/capability/ho-so-nang-luc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilityDuAnRoute = CapabilityDuAnRouteImport.update({
+  id: '/capability/du-an',
+  path: '/capability/du-an',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilityDoiTacRoute = CapabilityDoiTacRouteImport.update({
+  id: '/capability/doi-tac',
+  path: '/capability/doi-tac',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapabilityChungChiRoute = CapabilityChungChiRouteImport.update({
+  id: '/capability/chung-chi',
+  path: '/capability/chung-chi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTrachNhiemXaHoiRoute = AboutTrachNhiemXaHoiRouteImport.update({
+  id: '/about/trach-nhiem-xa-hoi',
+  path: '/about/trach-nhiem-xa-hoi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTamNhinSuMenhRoute = AboutTamNhinSuMenhRouteImport.update({
+  id: '/about/tam-nhin-su-menh',
+  path: '/about/tam-nhin-su-menh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutLichSuRoute = AboutLichSuRouteImport.update({
+  id: '/about/lich-su',
+  path: '/about/lich-su',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutBanDieuHanhRoute = AboutBanDieuHanhRouteImport.update({
+  id: '/about/ban-dieu-hanh',
+  path: '/about/ban-dieu-hanh',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/capability': typeof CapabilityRoute
-  '/careers': typeof CareersRoute
-  '/contact': typeof ContactRoute
-  '/esg': typeof EsgRoute
-  '/members': typeof MembersRoute
-  '/news': typeof NewsRoute
-  '/sectors': typeof SectorsRoute
+  '/about/ban-dieu-hanh': typeof AboutBanDieuHanhRoute
+  '/about/lich-su': typeof AboutLichSuRoute
+  '/about/tam-nhin-su-menh': typeof AboutTamNhinSuMenhRoute
+  '/about/trach-nhiem-xa-hoi': typeof AboutTrachNhiemXaHoiRoute
+  '/capability/chung-chi': typeof CapabilityChungChiRoute
+  '/capability/doi-tac': typeof CapabilityDoiTacRoute
+  '/capability/du-an': typeof CapabilityDuAnRoute
+  '/capability/ho-so-nang-luc': typeof CapabilityHoSoNangLucRoute
+  '/careers/ung-tuyen': typeof CareersUngTuyenRoute
+  '/careers/vi-tri-dang-tuyen': typeof CareersViTriDangTuyenRoute
+  '/contact/van-phong': typeof ContactVanPhongRoute
+  '/esg/bao-cao-ben-vung': typeof EsgBaoCaoBenVungRoute
+  '/esg/chien-luoc': typeof EsgChienLuocRoute
+  '/esg/hoat-dong-cong-dong': typeof EsgHoatDongCongDongRoute
+  '/esg/van-hoa-doanh-nghiep': typeof EsgVanHoaDoanhNghiepRoute
+  '/members/$slug': typeof MembersSlugRoute
+  '/members/so-do-he-sinh-thai': typeof MembersSoDoHeSinhThaiRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/sectors/am-thanh-trinh-chieu': typeof SectorsAmThanhTrinhChieuRoute
+  '/sectors/cong-nghe-ai': typeof SectorsCongNgheAiRoute
+  '/sectors/nuoc-sach-nuoc-nong': typeof SectorsNuocSachNuocNongRoute
+  '/sectors/phu-kien-cua-kinh': typeof SectorsPhuKienCuaKinhRoute
+  '/sectors/vat-lieu-hoan-thien': typeof SectorsVatLieuHoanThienRoute
+  '/sectors/xay-dung-thi-cong': typeof SectorsXayDungThiCongRoute
+  '/about/': typeof AboutIndexRoute
+  '/capability/': typeof CapabilityIndexRoute
+  '/careers/': typeof CareersIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/esg/': typeof EsgIndexRoute
+  '/members/': typeof MembersIndexRoute
+  '/news/': typeof NewsIndexRoute
+  '/sectors/': typeof SectorsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/capability': typeof CapabilityRoute
-  '/careers': typeof CareersRoute
-  '/contact': typeof ContactRoute
-  '/esg': typeof EsgRoute
-  '/members': typeof MembersRoute
-  '/news': typeof NewsRoute
-  '/sectors': typeof SectorsRoute
+  '/about/ban-dieu-hanh': typeof AboutBanDieuHanhRoute
+  '/about/lich-su': typeof AboutLichSuRoute
+  '/about/tam-nhin-su-menh': typeof AboutTamNhinSuMenhRoute
+  '/about/trach-nhiem-xa-hoi': typeof AboutTrachNhiemXaHoiRoute
+  '/capability/chung-chi': typeof CapabilityChungChiRoute
+  '/capability/doi-tac': typeof CapabilityDoiTacRoute
+  '/capability/du-an': typeof CapabilityDuAnRoute
+  '/capability/ho-so-nang-luc': typeof CapabilityHoSoNangLucRoute
+  '/careers/ung-tuyen': typeof CareersUngTuyenRoute
+  '/careers/vi-tri-dang-tuyen': typeof CareersViTriDangTuyenRoute
+  '/contact/van-phong': typeof ContactVanPhongRoute
+  '/esg/bao-cao-ben-vung': typeof EsgBaoCaoBenVungRoute
+  '/esg/chien-luoc': typeof EsgChienLuocRoute
+  '/esg/hoat-dong-cong-dong': typeof EsgHoatDongCongDongRoute
+  '/esg/van-hoa-doanh-nghiep': typeof EsgVanHoaDoanhNghiepRoute
+  '/members/$slug': typeof MembersSlugRoute
+  '/members/so-do-he-sinh-thai': typeof MembersSoDoHeSinhThaiRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/sectors/am-thanh-trinh-chieu': typeof SectorsAmThanhTrinhChieuRoute
+  '/sectors/cong-nghe-ai': typeof SectorsCongNgheAiRoute
+  '/sectors/nuoc-sach-nuoc-nong': typeof SectorsNuocSachNuocNongRoute
+  '/sectors/phu-kien-cua-kinh': typeof SectorsPhuKienCuaKinhRoute
+  '/sectors/vat-lieu-hoan-thien': typeof SectorsVatLieuHoanThienRoute
+  '/sectors/xay-dung-thi-cong': typeof SectorsXayDungThiCongRoute
+  '/about': typeof AboutIndexRoute
+  '/capability': typeof CapabilityIndexRoute
+  '/careers': typeof CareersIndexRoute
+  '/contact': typeof ContactIndexRoute
+  '/esg': typeof EsgIndexRoute
+  '/members': typeof MembersIndexRoute
+  '/news': typeof NewsIndexRoute
+  '/sectors': typeof SectorsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/capability': typeof CapabilityRoute
-  '/careers': typeof CareersRoute
-  '/contact': typeof ContactRoute
-  '/esg': typeof EsgRoute
-  '/members': typeof MembersRoute
-  '/news': typeof NewsRoute
-  '/sectors': typeof SectorsRoute
+  '/about/ban-dieu-hanh': typeof AboutBanDieuHanhRoute
+  '/about/lich-su': typeof AboutLichSuRoute
+  '/about/tam-nhin-su-menh': typeof AboutTamNhinSuMenhRoute
+  '/about/trach-nhiem-xa-hoi': typeof AboutTrachNhiemXaHoiRoute
+  '/capability/chung-chi': typeof CapabilityChungChiRoute
+  '/capability/doi-tac': typeof CapabilityDoiTacRoute
+  '/capability/du-an': typeof CapabilityDuAnRoute
+  '/capability/ho-so-nang-luc': typeof CapabilityHoSoNangLucRoute
+  '/careers/ung-tuyen': typeof CareersUngTuyenRoute
+  '/careers/vi-tri-dang-tuyen': typeof CareersViTriDangTuyenRoute
+  '/contact/van-phong': typeof ContactVanPhongRoute
+  '/esg/bao-cao-ben-vung': typeof EsgBaoCaoBenVungRoute
+  '/esg/chien-luoc': typeof EsgChienLuocRoute
+  '/esg/hoat-dong-cong-dong': typeof EsgHoatDongCongDongRoute
+  '/esg/van-hoa-doanh-nghiep': typeof EsgVanHoaDoanhNghiepRoute
+  '/members/$slug': typeof MembersSlugRoute
+  '/members/so-do-he-sinh-thai': typeof MembersSoDoHeSinhThaiRoute
+  '/news/$slug': typeof NewsSlugRoute
+  '/sectors/am-thanh-trinh-chieu': typeof SectorsAmThanhTrinhChieuRoute
+  '/sectors/cong-nghe-ai': typeof SectorsCongNgheAiRoute
+  '/sectors/nuoc-sach-nuoc-nong': typeof SectorsNuocSachNuocNongRoute
+  '/sectors/phu-kien-cua-kinh': typeof SectorsPhuKienCuaKinhRoute
+  '/sectors/vat-lieu-hoan-thien': typeof SectorsVatLieuHoanThienRoute
+  '/sectors/xay-dung-thi-cong': typeof SectorsXayDungThiCongRoute
+  '/about/': typeof AboutIndexRoute
+  '/capability/': typeof CapabilityIndexRoute
+  '/careers/': typeof CareersIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/esg/': typeof EsgIndexRoute
+  '/members/': typeof MembersIndexRoute
+  '/news/': typeof NewsIndexRoute
+  '/sectors/': typeof SectorsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
-    | '/capability'
-    | '/careers'
-    | '/contact'
-    | '/esg'
-    | '/members'
-    | '/news'
-    | '/sectors'
+    | '/about/ban-dieu-hanh'
+    | '/about/lich-su'
+    | '/about/tam-nhin-su-menh'
+    | '/about/trach-nhiem-xa-hoi'
+    | '/capability/chung-chi'
+    | '/capability/doi-tac'
+    | '/capability/du-an'
+    | '/capability/ho-so-nang-luc'
+    | '/careers/ung-tuyen'
+    | '/careers/vi-tri-dang-tuyen'
+    | '/contact/van-phong'
+    | '/esg/bao-cao-ben-vung'
+    | '/esg/chien-luoc'
+    | '/esg/hoat-dong-cong-dong'
+    | '/esg/van-hoa-doanh-nghiep'
+    | '/members/$slug'
+    | '/members/so-do-he-sinh-thai'
+    | '/news/$slug'
+    | '/sectors/am-thanh-trinh-chieu'
+    | '/sectors/cong-nghe-ai'
+    | '/sectors/nuoc-sach-nuoc-nong'
+    | '/sectors/phu-kien-cua-kinh'
+    | '/sectors/vat-lieu-hoan-thien'
+    | '/sectors/xay-dung-thi-cong'
+    | '/about/'
+    | '/capability/'
+    | '/careers/'
+    | '/contact/'
+    | '/esg/'
+    | '/members/'
+    | '/news/'
+    | '/sectors/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about/ban-dieu-hanh'
+    | '/about/lich-su'
+    | '/about/tam-nhin-su-menh'
+    | '/about/trach-nhiem-xa-hoi'
+    | '/capability/chung-chi'
+    | '/capability/doi-tac'
+    | '/capability/du-an'
+    | '/capability/ho-so-nang-luc'
+    | '/careers/ung-tuyen'
+    | '/careers/vi-tri-dang-tuyen'
+    | '/contact/van-phong'
+    | '/esg/bao-cao-ben-vung'
+    | '/esg/chien-luoc'
+    | '/esg/hoat-dong-cong-dong'
+    | '/esg/van-hoa-doanh-nghiep'
+    | '/members/$slug'
+    | '/members/so-do-he-sinh-thai'
+    | '/news/$slug'
+    | '/sectors/am-thanh-trinh-chieu'
+    | '/sectors/cong-nghe-ai'
+    | '/sectors/nuoc-sach-nuoc-nong'
+    | '/sectors/phu-kien-cua-kinh'
+    | '/sectors/vat-lieu-hoan-thien'
+    | '/sectors/xay-dung-thi-cong'
     | '/about'
     | '/capability'
     | '/careers'
@@ -125,86 +390,78 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
-    | '/capability'
-    | '/careers'
-    | '/contact'
-    | '/esg'
-    | '/members'
-    | '/news'
-    | '/sectors'
+    | '/about/ban-dieu-hanh'
+    | '/about/lich-su'
+    | '/about/tam-nhin-su-menh'
+    | '/about/trach-nhiem-xa-hoi'
+    | '/capability/chung-chi'
+    | '/capability/doi-tac'
+    | '/capability/du-an'
+    | '/capability/ho-so-nang-luc'
+    | '/careers/ung-tuyen'
+    | '/careers/vi-tri-dang-tuyen'
+    | '/contact/van-phong'
+    | '/esg/bao-cao-ben-vung'
+    | '/esg/chien-luoc'
+    | '/esg/hoat-dong-cong-dong'
+    | '/esg/van-hoa-doanh-nghiep'
+    | '/members/$slug'
+    | '/members/so-do-he-sinh-thai'
+    | '/news/$slug'
+    | '/sectors/am-thanh-trinh-chieu'
+    | '/sectors/cong-nghe-ai'
+    | '/sectors/nuoc-sach-nuoc-nong'
+    | '/sectors/phu-kien-cua-kinh'
+    | '/sectors/vat-lieu-hoan-thien'
+    | '/sectors/xay-dung-thi-cong'
+    | '/about/'
+    | '/capability/'
+    | '/careers/'
+    | '/contact/'
+    | '/esg/'
+    | '/members/'
+    | '/news/'
+    | '/sectors/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  CapabilityRoute: typeof CapabilityRoute
-  CareersRoute: typeof CareersRoute
-  ContactRoute: typeof ContactRoute
-  EsgRoute: typeof EsgRoute
-  MembersRoute: typeof MembersRoute
-  NewsRoute: typeof NewsRoute
-  SectorsRoute: typeof SectorsRoute
+  AboutBanDieuHanhRoute: typeof AboutBanDieuHanhRoute
+  AboutLichSuRoute: typeof AboutLichSuRoute
+  AboutTamNhinSuMenhRoute: typeof AboutTamNhinSuMenhRoute
+  AboutTrachNhiemXaHoiRoute: typeof AboutTrachNhiemXaHoiRoute
+  CapabilityChungChiRoute: typeof CapabilityChungChiRoute
+  CapabilityDoiTacRoute: typeof CapabilityDoiTacRoute
+  CapabilityDuAnRoute: typeof CapabilityDuAnRoute
+  CapabilityHoSoNangLucRoute: typeof CapabilityHoSoNangLucRoute
+  CareersUngTuyenRoute: typeof CareersUngTuyenRoute
+  CareersViTriDangTuyenRoute: typeof CareersViTriDangTuyenRoute
+  ContactVanPhongRoute: typeof ContactVanPhongRoute
+  EsgBaoCaoBenVungRoute: typeof EsgBaoCaoBenVungRoute
+  EsgChienLuocRoute: typeof EsgChienLuocRoute
+  EsgHoatDongCongDongRoute: typeof EsgHoatDongCongDongRoute
+  EsgVanHoaDoanhNghiepRoute: typeof EsgVanHoaDoanhNghiepRoute
+  MembersSlugRoute: typeof MembersSlugRoute
+  MembersSoDoHeSinhThaiRoute: typeof MembersSoDoHeSinhThaiRoute
+  NewsSlugRoute: typeof NewsSlugRoute
+  SectorsAmThanhTrinhChieuRoute: typeof SectorsAmThanhTrinhChieuRoute
+  SectorsCongNgheAiRoute: typeof SectorsCongNgheAiRoute
+  SectorsNuocSachNuocNongRoute: typeof SectorsNuocSachNuocNongRoute
+  SectorsPhuKienCuaKinhRoute: typeof SectorsPhuKienCuaKinhRoute
+  SectorsVatLieuHoanThienRoute: typeof SectorsVatLieuHoanThienRoute
+  SectorsXayDungThiCongRoute: typeof SectorsXayDungThiCongRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  CapabilityIndexRoute: typeof CapabilityIndexRoute
+  CareersIndexRoute: typeof CareersIndexRoute
+  ContactIndexRoute: typeof ContactIndexRoute
+  EsgIndexRoute: typeof EsgIndexRoute
+  MembersIndexRoute: typeof MembersIndexRoute
+  NewsIndexRoute: typeof NewsIndexRoute
+  SectorsIndexRoute: typeof SectorsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sectors': {
-      id: '/sectors'
-      path: '/sectors'
-      fullPath: '/sectors'
-      preLoaderRoute: typeof SectorsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/news': {
-      id: '/news'
-      path: '/news'
-      fullPath: '/news'
-      preLoaderRoute: typeof NewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/members': {
-      id: '/members'
-      path: '/members'
-      fullPath: '/members'
-      preLoaderRoute: typeof MembersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esg': {
-      id: '/esg'
-      path: '/esg'
-      fullPath: '/esg'
-      preLoaderRoute: typeof EsgRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/careers': {
-      id: '/careers'
-      path: '/careers'
-      fullPath: '/careers'
-      preLoaderRoute: typeof CareersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/capability': {
-      id: '/capability'
-      path: '/capability'
-      fullPath: '/capability'
-      preLoaderRoute: typeof CapabilityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -212,29 +469,278 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sectors/': {
+      id: '/sectors/'
+      path: '/sectors'
+      fullPath: '/sectors/'
+      preLoaderRoute: typeof SectorsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/': {
+      id: '/news/'
+      path: '/news'
+      fullPath: '/news/'
+      preLoaderRoute: typeof NewsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/members/': {
+      id: '/members/'
+      path: '/members'
+      fullPath: '/members/'
+      preLoaderRoute: typeof MembersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg/': {
+      id: '/esg/'
+      path: '/esg'
+      fullPath: '/esg/'
+      preLoaderRoute: typeof EsgIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact/': {
+      id: '/contact/'
+      path: '/contact'
+      fullPath: '/contact/'
+      preLoaderRoute: typeof ContactIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/': {
+      id: '/careers/'
+      path: '/careers'
+      fullPath: '/careers/'
+      preLoaderRoute: typeof CareersIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capability/': {
+      id: '/capability/'
+      path: '/capability'
+      fullPath: '/capability/'
+      preLoaderRoute: typeof CapabilityIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/': {
+      id: '/about/'
+      path: '/about'
+      fullPath: '/about/'
+      preLoaderRoute: typeof AboutIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/xay-dung-thi-cong': {
+      id: '/sectors/xay-dung-thi-cong'
+      path: '/sectors/xay-dung-thi-cong'
+      fullPath: '/sectors/xay-dung-thi-cong'
+      preLoaderRoute: typeof SectorsXayDungThiCongRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/vat-lieu-hoan-thien': {
+      id: '/sectors/vat-lieu-hoan-thien'
+      path: '/sectors/vat-lieu-hoan-thien'
+      fullPath: '/sectors/vat-lieu-hoan-thien'
+      preLoaderRoute: typeof SectorsVatLieuHoanThienRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/phu-kien-cua-kinh': {
+      id: '/sectors/phu-kien-cua-kinh'
+      path: '/sectors/phu-kien-cua-kinh'
+      fullPath: '/sectors/phu-kien-cua-kinh'
+      preLoaderRoute: typeof SectorsPhuKienCuaKinhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/nuoc-sach-nuoc-nong': {
+      id: '/sectors/nuoc-sach-nuoc-nong'
+      path: '/sectors/nuoc-sach-nuoc-nong'
+      fullPath: '/sectors/nuoc-sach-nuoc-nong'
+      preLoaderRoute: typeof SectorsNuocSachNuocNongRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/cong-nghe-ai': {
+      id: '/sectors/cong-nghe-ai'
+      path: '/sectors/cong-nghe-ai'
+      fullPath: '/sectors/cong-nghe-ai'
+      preLoaderRoute: typeof SectorsCongNgheAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sectors/am-thanh-trinh-chieu': {
+      id: '/sectors/am-thanh-trinh-chieu'
+      path: '/sectors/am-thanh-trinh-chieu'
+      fullPath: '/sectors/am-thanh-trinh-chieu'
+      preLoaderRoute: typeof SectorsAmThanhTrinhChieuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/$slug': {
+      id: '/news/$slug'
+      path: '/news/$slug'
+      fullPath: '/news/$slug'
+      preLoaderRoute: typeof NewsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/members/so-do-he-sinh-thai': {
+      id: '/members/so-do-he-sinh-thai'
+      path: '/members/so-do-he-sinh-thai'
+      fullPath: '/members/so-do-he-sinh-thai'
+      preLoaderRoute: typeof MembersSoDoHeSinhThaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/members/$slug': {
+      id: '/members/$slug'
+      path: '/members/$slug'
+      fullPath: '/members/$slug'
+      preLoaderRoute: typeof MembersSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg/van-hoa-doanh-nghiep': {
+      id: '/esg/van-hoa-doanh-nghiep'
+      path: '/esg/van-hoa-doanh-nghiep'
+      fullPath: '/esg/van-hoa-doanh-nghiep'
+      preLoaderRoute: typeof EsgVanHoaDoanhNghiepRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg/hoat-dong-cong-dong': {
+      id: '/esg/hoat-dong-cong-dong'
+      path: '/esg/hoat-dong-cong-dong'
+      fullPath: '/esg/hoat-dong-cong-dong'
+      preLoaderRoute: typeof EsgHoatDongCongDongRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg/chien-luoc': {
+      id: '/esg/chien-luoc'
+      path: '/esg/chien-luoc'
+      fullPath: '/esg/chien-luoc'
+      preLoaderRoute: typeof EsgChienLuocRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg/bao-cao-ben-vung': {
+      id: '/esg/bao-cao-ben-vung'
+      path: '/esg/bao-cao-ben-vung'
+      fullPath: '/esg/bao-cao-ben-vung'
+      preLoaderRoute: typeof EsgBaoCaoBenVungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact/van-phong': {
+      id: '/contact/van-phong'
+      path: '/contact/van-phong'
+      fullPath: '/contact/van-phong'
+      preLoaderRoute: typeof ContactVanPhongRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/vi-tri-dang-tuyen': {
+      id: '/careers/vi-tri-dang-tuyen'
+      path: '/careers/vi-tri-dang-tuyen'
+      fullPath: '/careers/vi-tri-dang-tuyen'
+      preLoaderRoute: typeof CareersViTriDangTuyenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers/ung-tuyen': {
+      id: '/careers/ung-tuyen'
+      path: '/careers/ung-tuyen'
+      fullPath: '/careers/ung-tuyen'
+      preLoaderRoute: typeof CareersUngTuyenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capability/ho-so-nang-luc': {
+      id: '/capability/ho-so-nang-luc'
+      path: '/capability/ho-so-nang-luc'
+      fullPath: '/capability/ho-so-nang-luc'
+      preLoaderRoute: typeof CapabilityHoSoNangLucRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capability/du-an': {
+      id: '/capability/du-an'
+      path: '/capability/du-an'
+      fullPath: '/capability/du-an'
+      preLoaderRoute: typeof CapabilityDuAnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capability/doi-tac': {
+      id: '/capability/doi-tac'
+      path: '/capability/doi-tac'
+      fullPath: '/capability/doi-tac'
+      preLoaderRoute: typeof CapabilityDoiTacRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capability/chung-chi': {
+      id: '/capability/chung-chi'
+      path: '/capability/chung-chi'
+      fullPath: '/capability/chung-chi'
+      preLoaderRoute: typeof CapabilityChungChiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/trach-nhiem-xa-hoi': {
+      id: '/about/trach-nhiem-xa-hoi'
+      path: '/about/trach-nhiem-xa-hoi'
+      fullPath: '/about/trach-nhiem-xa-hoi'
+      preLoaderRoute: typeof AboutTrachNhiemXaHoiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/tam-nhin-su-menh': {
+      id: '/about/tam-nhin-su-menh'
+      path: '/about/tam-nhin-su-menh'
+      fullPath: '/about/tam-nhin-su-menh'
+      preLoaderRoute: typeof AboutTamNhinSuMenhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/lich-su': {
+      id: '/about/lich-su'
+      path: '/about/lich-su'
+      fullPath: '/about/lich-su'
+      preLoaderRoute: typeof AboutLichSuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about/ban-dieu-hanh': {
+      id: '/about/ban-dieu-hanh'
+      path: '/about/ban-dieu-hanh'
+      fullPath: '/about/ban-dieu-hanh'
+      preLoaderRoute: typeof AboutBanDieuHanhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  CapabilityRoute: CapabilityRoute,
-  CareersRoute: CareersRoute,
-  ContactRoute: ContactRoute,
-  EsgRoute: EsgRoute,
-  MembersRoute: MembersRoute,
-  NewsRoute: NewsRoute,
-  SectorsRoute: SectorsRoute,
+  AboutBanDieuHanhRoute: AboutBanDieuHanhRoute,
+  AboutLichSuRoute: AboutLichSuRoute,
+  AboutTamNhinSuMenhRoute: AboutTamNhinSuMenhRoute,
+  AboutTrachNhiemXaHoiRoute: AboutTrachNhiemXaHoiRoute,
+  CapabilityChungChiRoute: CapabilityChungChiRoute,
+  CapabilityDoiTacRoute: CapabilityDoiTacRoute,
+  CapabilityDuAnRoute: CapabilityDuAnRoute,
+  CapabilityHoSoNangLucRoute: CapabilityHoSoNangLucRoute,
+  CareersUngTuyenRoute: CareersUngTuyenRoute,
+  CareersViTriDangTuyenRoute: CareersViTriDangTuyenRoute,
+  ContactVanPhongRoute: ContactVanPhongRoute,
+  EsgBaoCaoBenVungRoute: EsgBaoCaoBenVungRoute,
+  EsgChienLuocRoute: EsgChienLuocRoute,
+  EsgHoatDongCongDongRoute: EsgHoatDongCongDongRoute,
+  EsgVanHoaDoanhNghiepRoute: EsgVanHoaDoanhNghiepRoute,
+  MembersSlugRoute: MembersSlugRoute,
+  MembersSoDoHeSinhThaiRoute: MembersSoDoHeSinhThaiRoute,
+  NewsSlugRoute: NewsSlugRoute,
+  SectorsAmThanhTrinhChieuRoute: SectorsAmThanhTrinhChieuRoute,
+  SectorsCongNgheAiRoute: SectorsCongNgheAiRoute,
+  SectorsNuocSachNuocNongRoute: SectorsNuocSachNuocNongRoute,
+  SectorsPhuKienCuaKinhRoute: SectorsPhuKienCuaKinhRoute,
+  SectorsVatLieuHoanThienRoute: SectorsVatLieuHoanThienRoute,
+  SectorsXayDungThiCongRoute: SectorsXayDungThiCongRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  CapabilityIndexRoute: CapabilityIndexRoute,
+  CareersIndexRoute: CareersIndexRoute,
+  ContactIndexRoute: ContactIndexRoute,
+  EsgIndexRoute: EsgIndexRoute,
+  MembersIndexRoute: MembersIndexRoute,
+  NewsIndexRoute: NewsIndexRoute,
+  SectorsIndexRoute: SectorsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
 
 import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
+import type { startInstance } from './start.ts'
 declare module '@tanstack/react-start' {
   interface Register {
     ssr: true
     router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
   }
 }

@@ -15,10 +15,10 @@ const NAV: NavItem[] = [
     to: "/about",
     children: [
       { label: "Tổng quan tập đoàn", to: "/about" },
-      { label: "Tầm nhìn – Sứ mệnh", to: "/about" },
-      { label: "HĐQT & Ban điều hành", to: "/about" },
-      { label: "Lịch sử hình thành", to: "/about" },
-      { label: "Trách nhiệm xã hội", to: "/about" },
+      { label: "Tầm nhìn – Sứ mệnh", to: "/about/tam-nhin-su-menh" },
+      { label: "HĐQT & Ban điều hành", to: "/about/ban-dieu-hanh" },
+      { label: "Lịch sử hình thành", to: "/about/lich-su" },
+      { label: "Trách nhiệm xã hội", to: "/about/trach-nhiem-xa-hoi" },
     ],
   },
   {
@@ -26,26 +26,58 @@ const NAV: NavItem[] = [
     to: "/members",
     children: [
       { label: "Danh sách công ty thành viên", to: "/members" },
-      { label: "Sơ đồ hệ sinh thái", to: "/members" },
+      { label: "Sơ đồ hệ sinh thái", to: "/members/so-do-he-sinh-thai" },
     ],
   },
   {
     label: "Lĩnh vực hoạt động",
     to: "/sectors",
     children: [
-      { label: "Vật liệu hoàn thiện", to: "/sectors" },
-      { label: "Âm thanh – trình chiếu", to: "/sectors" },
-      { label: "Phụ kiện cửa & kính", to: "/sectors" },
-      { label: "Nước sạch & nước nóng", to: "/sectors" },
-      { label: "Xây dựng & thi công", to: "/sectors" },
-      { label: "Công nghệ & AI bán hàng", to: "/sectors" },
+      { label: "Vật liệu hoàn thiện", to: "/sectors/vat-lieu-hoan-thien" },
+      { label: "Âm thanh – trình chiếu", to: "/sectors/am-thanh-trinh-chieu" },
+      { label: "Phụ kiện cửa & kính", to: "/sectors/phu-kien-cua-kinh" },
+      { label: "Nước sạch & nước nóng", to: "/sectors/nuoc-sach-nuoc-nong" },
+      { label: "Xây dựng & thi công", to: "/sectors/xay-dung-thi-cong" },
+      { label: "Công nghệ & AI bán hàng", to: "/sectors/cong-nghe-ai" },
     ],
   },
-  { label: "Năng lực", to: "/capability" },
-  { label: "ESG", to: "/esg" },
+  {
+    label: "Năng lực",
+    to: "/capability",
+    children: [
+      { label: "Hồ sơ năng lực", to: "/capability/ho-so-nang-luc" },
+      { label: "Dự án tiêu biểu", to: "/capability/du-an" },
+      { label: "Chứng chỉ & giải thưởng", to: "/capability/chung-chi" },
+      { label: "Đối tác chiến lược", to: "/capability/doi-tac" },
+    ],
+  },
+  {
+    label: "ESG",
+    to: "/esg",
+    children: [
+      { label: "Chiến lược ESG", to: "/esg/chien-luoc" },
+      { label: "Văn hóa doanh nghiệp", to: "/esg/van-hoa-doanh-nghiep" },
+      { label: "Hoạt động cộng đồng", to: "/esg/hoat-dong-cong-dong" },
+      { label: "Báo cáo bền vững", to: "/esg/bao-cao-ben-vung" },
+    ],
+  },
   { label: "Tin tức", to: "/news" },
-  { label: "Tuyển dụng", to: "/careers" },
-  { label: "Liên hệ", to: "/contact" },
+  {
+    label: "Tuyển dụng",
+    to: "/careers",
+    children: [
+      { label: "Vị trí đang tuyển", to: "/careers/vi-tri-dang-tuyen" },
+      { label: "Form ứng tuyển", to: "/careers/ung-tuyen" },
+    ],
+  },
+  {
+    label: "Liên hệ",
+    to: "/contact",
+    children: [
+      { label: "Yêu cầu báo giá", to: "/contact" },
+      { label: "Văn phòng & chi nhánh", to: "/contact/van-phong" },
+    ],
+  },
 ];
 
 export function Header() {

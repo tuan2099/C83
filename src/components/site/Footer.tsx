@@ -5,15 +5,33 @@ import logoWhite from "@/assets/logo-white.png";
 const COLS = [
   {
     title: "Về C83 Group",
-    links: ["Tổng quan tập đoàn", "Tầm nhìn – Sứ mệnh", "HĐQT & Ban điều hành", "Lịch sử hình thành", "Trách nhiệm xã hội"],
+    links: [
+      { label: "Tổng quan tập đoàn", to: "/about" },
+      { label: "Tầm nhìn – Sứ mệnh", to: "/about/tam-nhin-su-menh" },
+      { label: "HĐQT & Ban điều hành", to: "/about/ban-dieu-hanh" },
+      { label: "Lịch sử hình thành", to: "/about/lich-su" },
+      { label: "Trách nhiệm xã hội", to: "/about/trach-nhiem-xa-hoi" },
+    ],
   },
   {
     title: "Hệ sinh thái",
-    links: ["Công ty thành viên", "Sơ đồ hệ sinh thái", "Lĩnh vực hoạt động", "Dự án tiêu biểu", "Đối tác chiến lược"],
+    links: [
+      { label: "Công ty thành viên", to: "/members" },
+      { label: "Sơ đồ hệ sinh thái", to: "/members/so-do-he-sinh-thai" },
+      { label: "Lĩnh vực hoạt động", to: "/sectors" },
+      { label: "Dự án tiêu biểu", to: "/capability/du-an" },
+      { label: "Đối tác chiến lược", to: "/capability/doi-tac" },
+    ],
   },
   {
     title: "Phát triển",
-    links: ["Chiến lược ESG", "Văn hóa doanh nghiệp", "Hoạt động cộng đồng", "Báo cáo bền vững", "Tuyển dụng"],
+    links: [
+      { label: "Chiến lược ESG", to: "/esg/chien-luoc" },
+      { label: "Văn hóa doanh nghiệp", to: "/esg/van-hoa-doanh-nghiep" },
+      { label: "Hoạt động cộng đồng", to: "/esg/hoat-dong-cong-dong" },
+      { label: "Báo cáo bền vững", to: "/esg/bao-cao-ben-vung" },
+      { label: "Tuyển dụng", to: "/careers" },
+    ],
   },
 ];
 
@@ -88,8 +106,8 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-white/70 hover:text-accent transition">{l}</a>
+                <li key={l.label}>
+                  <Link to={l.to as never} className="text-white/70 hover:text-accent transition">{l.label}</Link>
                 </li>
               ))}
             </ul>

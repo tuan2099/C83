@@ -10,8 +10,8 @@
    ============================================ */
 
 @theme inline {
-  --font-sans: Arial, Helvetica, sans-serif;
-  --font-display: Arial, Helvetica, sans-serif;
+  --font-sans: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
+  --font-display: "Be Vietnam Pro", Arial, Helvetica, sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 6px;
